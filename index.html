@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rasik's Server</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff; /* white background */
+      color: #004080; /* deep blue text */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      background-color: #b8cff1; /* very light blue */
+      padding: 60px 50px;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(0, 64, 128, 0.2);
+      max-width: 600px;
+      width: 90%;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 15px;
+      color: #003366; /* dark blue */
+      letter-spacing: 3px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1.4rem;
+      margin-bottom: 50px;
+      color: #000000; /* medium blue */
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .links button {
+      background-color: #000000; /* deep blue */
+      color: #ffffff; /* white text */
+      font-size: 1.4rem;
+      padding: 18px 35px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 700;
+      box-shadow: 0 5px 15px rgba(0, 64, 128, 0.3);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .links button:hover {
+      background-color: #003366; /* darker blue on hover */
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      p {
+        font-size: 1.1rem;
+      }
+      .links button {
+        font-size: 1.1rem;
+        padding: 14px 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <h1>⚡ RASIK'S SERVER</h1>
+
+    <p>Welcome back , BROOO 🎉🥳</p>
+
+    <div class="links">
+      <button onclick="downloadWithPassword('project1.pptx')">🔐 TEAM (Download PPT)</button>
+      <button onclick="openProject('https://example.com/project2')">🔐 SECRET FOLDER</button>
+      <button onclick="openProject('https://example.com/docs')">🔐 DOCUMENTATION</button>
+      <button onclick="openProject('https://example.com/docs')">🔐 COLLEGE MATERIAL</button>
+    </div>
+  </div>
+
+  <script>
+    function downloadWithPassword(file) {
+      const correctPassword = "1234"; // Set your password here
+      const userInput = prompt("Enter password to download this PPT:");
+      if (userInput === correctPassword) {
+        const link = document.createElement("a");
+        link.href = file;
+        link.download = file;
+        link.click();
+      } else {
+        alert("Incorrect password. Download denied.");
+      }
+    }
+
+    function openProject(url) {
+      const correctPassword = "1234";
+      const userInput = prompt("Enter password to access this project:");
+      if (userInput === correctPassword) {
+        window.open(url, "_blank");
+      } else {
+        alert("Incorrect password. Access denied.");
+      }
+    }
+  </script>
+</body>
+</html>
