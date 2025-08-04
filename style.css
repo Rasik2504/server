@@ -30,14 +30,14 @@ body {
 h1 {
   font-size: 2.8rem;
   margin-bottom: 15px;
-  color: #ffffff;
+  color: #000000;
 }
 
 /* Subtitle */
 p {
   font-size: 1.2rem;
   margin-bottom: 30px;
-  color: #f0f0f0;
+  color: #000000;
 }
 
 /* Buttons */
@@ -48,8 +48,8 @@ p {
 }
 
 .links button {
-  background-color: rgba(0, 71, 171, 0.8);
-  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
   border: none;
   padding: 14px 20px;
   font-size: 1.1rem;
