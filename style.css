@@ -15,6 +15,10 @@ body {
   padding: 40px 50px;
 }
 
+.full-page {
+  width: 100%;
+}
+
 /* Main container */
 .container {
   background: rgba(255, 255, 255, 0.1);
@@ -51,7 +55,7 @@ p {
 
 .links button,
 .container button {
-  background: #000; /* pure black */
+  background: #000;
   border: none;
   color: white;
   font-size: 1.05rem;
@@ -80,7 +84,6 @@ p {
   width: 100%;
 }
 
-/* Each file box */
 .file {
   background: rgba(0, 0, 0, 0.1);
   padding: 20px 1px;
